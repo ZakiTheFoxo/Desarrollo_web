@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF=8">
+		<title>Input</title>
+	</head>
+
+	<body>
+		<form method="GET">
+			Color: <input type="color" name="color"> Selecciona color de paleta. <br>
+			Fecha: <input type="date" name="fecha"> Muestra un calendario (Chrome) regresa fecha seleccionada. <br>
+			Hora: <input type="time" name="hora"> Meter hora en formato hh:mm. <br>
+			Mes: <input type="month" name="mes"> Muestra un calendario (Chrome) y devuelve mes y año de la fecha seleccionada. <br>
+			Edad: <input type="number" name="edad" min="18" max="30"> Define un campo numérico con restricciones si es necesario. <br>
+			Valor: <input type="range" name="points" min="0" max="10" oninput="this.nextElementSibling.value = this.value"> <output>5</output> Lo muestra como un slider. <br>
+			email: <input type="email" name="correo"> Cadena que contenga @. <br>
+			URL: <input type="url" name="direc"> Espera cadena http://www. <br>
+			Semana: <input type="week" name="semana"> Muestra un calendario (Chrome) y manda la semana y el año de la fecha seleccionada. <br>
+
+			Comentario: <br><textarea name="comentario" rows="15" cols="50" placeholder="Escribe aquí..."></textarea><br>
+
+			<input type="submit" value="enviar">
+		</form>
+	</body>
+</html>

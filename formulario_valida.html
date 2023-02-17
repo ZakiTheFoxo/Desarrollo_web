@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF=8">
+		<title>Formulario valida</title>
+		<script type="text/javascript">
+			function valida_envia(){
+				// Validar nombre
+				if(document.formulario.nombre.value.length == 0){
+					alert("Tiene que escribir su nombre")
+					document.formulario.nombre.focus()
+					return 0;
+				};
+
+				// Validar edad (18+)
+				if(document.formulario.edad.value == ""){
+					alert("Tiene que introducir un número entero en su edad")
+					document.formulario.edad.focus()
+					return 0;
+				} else if(document.formulario.edad.value < 18){
+					alert("Debe tener al menos 18 años")
+					document.formulario.edad.focus()
+					return 0;
+				}
+
+				// Valido materias
+				if(document.formulario.materia.selectedIndex == 0){
+					alert("Debe seleccionar una materia")
+					document.formulario.materia.focus()
+					return 0;
+				}
+
+				// Enviar formulario
+				/* alert("Muchas gracias por enviar el formulario") */
+				document.formulario.submit();
+			}
+		</script>
+	</head>
+
+	<body>
+		<form method="GET" name="formulario">
+			<table>
+				<tr>
+					<td>
+						Nombre:
+					</td>
+					<td>
+						<input type="text" name="nombre" size="30">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Edad:
+					</td>
+					<td>
+						<input type="number" name="edad" style="width: 3em">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Materia:
+					</td>
+					<td>
+						<select name="materia">
+							<option selected>Elegir</option>
+							<option>Desarrollo Web</option>
+							<option>Proceso Personal de Software</option>
+							<option>Programación de Dispositivos Móviles</option>
+							<option>Inteligencia Artificial</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="Enviar" onclick="valida_envia()">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
+			 
+		

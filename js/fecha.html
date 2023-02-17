@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Mostrar fecha javascript</title>
+	</head>
+
+	<script type="text/javascript">
+		document.write(new Date() + "<br>");
+
+		var f = new Date();
+		var d = f.getDate();
+		var m =f.getMonth() + 1;
+		var y = f.getFullYear();
+		var fecha = d + "/" + m + "/" + y;
+		document.write(fecha + " ");
+
+		var h = f.getHours();
+		var min = f.getMinutes();
+		var hora = h + ":" + min;
+		document.write(hora);
+	</script>
+</html>

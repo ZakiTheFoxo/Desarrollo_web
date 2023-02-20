@@ -11,10 +11,19 @@
 				background-size: 100% 100%;
 			}
 		</style>
+
+		<script type="text/javascript">
+			function iniciarSesion(){
+				window.open("tk_inicio_sesion.html", "NuevaVentana", "top = 50, width = 600, height = 200, resizable=no");
+			}
+		</script>
 	</head>
 
 
 	<body>
-		<img src="../imagenes/trinken_logo.png" width="50" height="50" >
+		<div>
+			<img valign="top" halign="left" src="../imagenes/trinken_logo.png" width="3%" height="100%" >
+			<input type="image" name="iniciarsesion" alt="Iniciar Sesion" src="../imagenes/user.png" height="25" width="25" align="right" onclick="iniciarSesion()">
+		</div>
 	</body>
 </html>

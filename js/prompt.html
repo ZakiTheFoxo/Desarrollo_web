@@ -7,7 +7,7 @@
 
 	<script type="text/javascript">
 		var email=prompt("Correo electrónico", "algo@correo.com")
-		if(email == undefined || email == "algo@correo.com")
+		if(email == "" || email == "algo@correo.com")
 			location.href = "prompt.html";
 		else
 			window.alert("Muy bien tu correo " + email + " ha sido dado de alta correctamente")

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Suma (Ingresar Variables)</title>
+
+        <style>
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        </style>
+	</head>
+
+	<body>
+        <form method="GET" action="php/suma.php">
+            <table align="center" width="50%" cellpadding="10%">
+                <tr>
+                    <td align="center">
+                        Variable 1: <input type="number" name="var_1" style="width: 3em">
+                    </td>
+                    <td align="center">
+                        Variable 2: <input type="number" name="var_2" style="width: 3em">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <table width="100%" height="100%">
+                            <tr>
+                                <td align="center">
+                                    <input type="radio" name="operation" value="suma">Suma
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="operation" value="resta">Resta
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="operation" value="multiplicar">Multiplicar
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="operation" value="dividir">Dividir
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Realizar Operación">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

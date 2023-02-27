@@ -11,10 +11,36 @@
                 margin: 0;
             }
         </style>
+        <script>
+        	function validarDatos(){
+                if(document.formulario.var_1.value == ""){
+					alert("Tiene que introducir un número en la variable 1")
+					document.formulario.var_1.focus()
+					return 0;
+				}
+
+                if(document.formulario.var_2.value == ""){
+					alert("Tiene que introducir un número en la variable 2")
+					document.formulario.var_2.focus()
+					return 0;
+				}else if(document.formulario.var_2.value == 0 && document.formulario.operation.value == "dividir"){
+					alert("El número no puede ser 0 cuando se usa división")
+					document.formulario.var_2.focus()
+					return 0;
+				}
+
+                if(document.formulario.operation.value == ""){
+                    alert("Tiene que elegir una operación")
+                    return 0;
+                }
+
+                document.formulario.submit();
+            }
+        </script>
 	</head>
 
 	<body>
-        <form method="GET" action="php/suma.php">
+        <form method="GET" action="funcion2.php" name="formulario">
             <table align="center" width="50%" cellpadding="10%">
                 <tr>
                     <td align="center">
@@ -46,7 +72,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
-                        <input type="submit" value="Realizar Operación">
+                        <input type="button" value="Realizar Operación" onclick="validarDatos()">
                     </td>
                 </tr>
             </table>
